@@ -1,0 +1,24 @@
+<h1>Review this Book! </h1>
+
+
+  <%= form_for [@book, @review] do |f| %>
+
+  <%= f.label :rating %>
+  <%= f.text_field :rating %>
+
+
+  <%= f.label :body %>
+  <%= f.text_field :body %>
+
+  <%= f.submit "Add Review" %>
+
+
+  <% end %>
+
+
+
+
+   <% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+
+   <% end %>
